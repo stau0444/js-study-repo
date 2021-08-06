@@ -1,18 +1,15 @@
-// let box = document.querySelector('.box');
-// let isClicked = false;
 
-// box.addEventListener('click',()=>{
-//     console.log('click!');
-//     box.classList.add('active');
-//     isClicked = box.classList.contains('active');
-// })
-
-console.log('helloo')
+const timer = setTimeout(()=>{console.log('hi there')},3000)
 
 
+document.querySelector('p').addEventListener('click' , ()=>{
+    console.log('stoped')
+    clearTimeout(timer)
+})
 
 
+const timer = setInterval(()=>{console.log('hi there')},3000);
 
-
-
-
+document.querySelector('p').addEventListener('click',()=>{
+    clearInterval(timer)
+})
