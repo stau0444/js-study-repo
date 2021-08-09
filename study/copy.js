@@ -1,5 +1,5 @@
 //깊은 복사를 위한 라이브러리
-import _ from 'loadash'
+import _ from 'lodash'
 
 //얕은 복사 , 깊은 복사 
 
@@ -17,6 +17,7 @@ const copyUser = Object.assign({}, user) ;
 //전개 연산자를 사용해서 아래와 같이 할 복사할 수 도 있다.
 const copyUser2 = {...user}
 console.log(copyUser === user);
+console.log('isSame:',copyUser.emails === user.emails)
 
 
 user.age = 22 
@@ -25,8 +26,11 @@ console.log(copyUser)
 
 console.log('-----------깊은복사---------')
 
-
 //깊은 복사 
 //얕은 복사는 객체안에 저장된 참조형 데이터는 복사하지 않는다.
+// lodash 라이브러리 사용한 깊은 복사
+const copyUserDeep = _.cloneDeep(user);
 
-//const copyUserDeep = _.cloneDeep
+console.log(copyUserDeep === user); 
+console.log(copyUserDeep);
+console.log('isSame:',copyUserDeep.emails === user.emails)

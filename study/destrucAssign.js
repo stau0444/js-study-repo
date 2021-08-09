@@ -1,7 +1,7 @@
 //구조 분해 할당 (Destructuring assignment)
 //비구조화 할당 
 
-const user ={
+const user = {
     name:'ugo',
     age:'85',
     email:'test@test.com',
