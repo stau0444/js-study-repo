@@ -4,7 +4,12 @@ const body = document.querySelector('body')
 
 const h1El = document.querySelector('h1');
 
-const addBtn =  document.querySelector('button');
+const addBtn =  document.querySelector('.addButton');
+
+const toTopBtn = document.querySelector('.toTopBtn')
+toTopBtn.addEventListener('click',()=>{
+    window.scrollTo(0,document.querySelector('body').offsetHeight)
+})
 
 const searchBtn = document.querySelector('.searchBtn')
 searchBtn.addEventListener(
